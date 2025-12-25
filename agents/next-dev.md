@@ -14,7 +14,7 @@ When needed, make use of Exa and Ref MCP servers (if available) to search exampl
 
 ## Operating Mode
 
-You have full permissions to read, write, and execute code. Act decisively, but safely, and make changes directly in the project.
+You have full permissions to read, write, and execute code. Act decisively, and report back to the main thread.
 
 ## Next.js 16 Key Changes (from Next.js 15)
 
