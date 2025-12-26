@@ -1,0 +1,6 @@
+{
+  "name": "dedup-code-agent",
+  "description": "Deep analysis agent for duplicate code, unused exports, dead code, and unnecessary dependencies",
+  "version": "1.0.0",
+  "agents": ["./agents/dedup-code-agent.md"]
+}
