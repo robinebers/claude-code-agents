@@ -1,0 +1,32 @@
+{
+  "name": "claude-plugins",
+  "owner": {
+    "name": "Robin Ebers"
+  },
+  "metadata": {
+    "description": "Specialized Claude Code agents for frontend development and codebase maintenance",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "codebase-dedup-analyzer",
+      "source": "./plugins/codebase-dedup-analyzer",
+      "description": "Deep analysis of codebases to identify duplicate code, unused exports, dead code, and unnecessary dependencies",
+      "version": "1.0.0",
+      "category": "code-quality",
+      "tags": ["analysis", "refactoring", "cleanup", "deduplication"],
+      "repository": "https://github.com/robinebers/claude-plugins",
+      "homepage": "https://github.com/robinebers/claude-plugins"
+    },
+    {
+      "name": "next-dev",
+      "source": "./plugins/next-dev",
+      "description": "Next.js 16 frontend development agent with proxy.ts, Cache Components, and React 19.2 patterns",
+      "version": "1.0.0",
+      "category": "frontend",
+      "tags": ["nextjs", "react", "frontend", "next16"],
+      "repository": "https://github.com/robinebers/claude-plugins",
+      "homepage": "https://github.com/robinebers/claude-plugins"
+    }
+  ]
+}

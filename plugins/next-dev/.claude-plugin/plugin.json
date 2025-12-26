@@ -1,0 +1,6 @@
+{
+  "name": "next-dev",
+  "description": "Next.js 16 frontend development agent with modern patterns",
+  "version": "1.0.0",
+  "agents": ["./agents/next-dev.md"]
+}
