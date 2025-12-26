@@ -11,22 +11,23 @@ Add the marketplace:
 
 Install plugins:
 ```
-/plugin install codebase-dedup-analyzer@claude-plugins
-/plugin install next-dev@claude-plugins
+/plugin install dedup-code-agent@claude-plugins
+/plugin install nextjs-dev-agent@claude-plugins
 ```
 
 ## Available Plugins
 
-### codebase-dedup-analyzer
-Deep analysis of codebases to identify:
-- Duplicate code and DRY violations
-- Unused exports and dead code
-- Orphaned files and functions
-- Unnecessary dependencies
+### dedup-code-agent
+Deep analysis of the codebase to identify sloppy AI code, like:
+- Duplicate code and copy-pasted functions
+- Unused exports and dead code branches
+- Orphaned files with no imports
+- Unnecessary dependencies in package.json
 
-### next-dev
-Next.js 16 frontend development agent with:
-- proxy.ts (replacing middleware.ts)
-- Cache Components and new caching APIs
-- Async request APIs (cookies, headers, params)
-- React 19.2 patterns (View Transitions, useEffectEvent, Activity)
+### nextjs-dev-agent
+Next.js 16 frontend development with up-to-date patterns:
+- proxy.ts instead of middleware.ts
+- Cache Components with `"use cache"` directive
+- Async request APIs (await cookies/headers/params)
+- React 19.2 features (View Transitions, Activity, useEffectEvent)
+- Tailwind CSS v4 configuration
