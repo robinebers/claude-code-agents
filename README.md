@@ -1,4 +1,4 @@
-# Claude Plugins
+# Claude Code Plugins
 
 A Claude Code plugin marketplace with AI coding plugins built by Robin Ebers.
 
@@ -6,13 +6,13 @@ A Claude Code plugin marketplace with AI coding plugins built by Robin Ebers.
 
 Add the marketplace:
 ```
-/plugin marketplace add robinebers/claude-plugins
+/plugin marketplace add robinebers/cc-plugins
 ```
 
 Install plugins:
 ```
-/plugin install dedup-code-agent@claude-plugins
-/plugin install nextjs-dev-agent@claude-plugins
+/plugin install dedup-code-agent@cc-plugins
+/plugin install nextjs-dev-agent@cc-plugins
 ```
 
 ## Available Plugins
