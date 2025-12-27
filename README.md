@@ -12,7 +12,7 @@ Add the marketplace:
 Install plugins:
 ```
 /plugin install dedup-code-agent@cc-plugins
-/plugin install nextjs-dev-agent@cc-plugins
+/plugin install developing-nextjs@cc-plugins
 ```
 
 ## Available Plugins
@@ -24,8 +24,8 @@ Deep analysis of the codebase to identify sloppy AI code, like:
 - Orphaned files with no imports
 - Unnecessary dependencies in package.json
 
-### nextjs-dev-agent
-Next.js 16 frontend development agent that helps you:
+### developing-nextjs
+Next.js 16 frontend development skill that helps you:
 - Create pages, layouts, and components
 - Build API routes and Server Actions
 - Set up data fetching with proper caching

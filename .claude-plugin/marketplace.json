@@ -4,7 +4,7 @@
     "name": "Robin Ebers"
   },
   "metadata": {
-    "description": "Specialized Claude Code agents for frontend development and codebase maintenance",
+    "description": "Specialized Claude Code plugins for frontend development and codebase maintenance",
     "version": "1.0.0"
   },
   "plugins": [
@@ -19,12 +19,12 @@
       "homepage": "https://github.com/robinebers/claude-plugins"
     },
     {
-      "name": "nextjs-dev-agent",
-      "source": "./plugins/nextjs-dev-agent",
-      "description": "Next.js 16 frontend development agent with proxy.ts, Cache Components, and React 19.2 patterns",
+      "name": "developing-nextjs",
+      "source": "./plugins/developing-nextjs",
+      "description": "Next.js 16 frontend development skill with proxy.ts, Cache Components, and React 19.2 patterns",
       "version": "1.0.0",
       "category": "frontend",
-      "tags": ["nextjs", "react", "frontend", "next16"],
+      "tags": ["nextjs", "react", "frontend", "next16", "skill"],
       "repository": "https://github.com/robinebers/claude-plugins",
       "homepage": "https://github.com/robinebers/claude-plugins"
     }

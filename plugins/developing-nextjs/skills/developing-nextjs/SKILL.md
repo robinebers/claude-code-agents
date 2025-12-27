@@ -1,22 +1,13 @@
 ---
-name: nextjs-dev-agent
-description: Use this agent for Next.js 16 frontend development - creating components, pages, layouts, API routes, and refactoring code. Optimized for targeted, DRY code changes using Next.js 16 patterns including proxy.ts, Cache Components, async request APIs, and React 19.2 features.\n\nExamples:\n\n<example>\nContext: User wants to create a new page component\nuser: "Create a dashboard page with a sidebar"\nassistant: "I'll use the nextjs-dev-agent to create this dashboard page following Next.js 16 patterns."\n<commentary>\nNext.js frontend work - use nextjs-dev-agent for App Router patterns and React 19.2 features.\n</commentary>\n</example>\n\n<example>\nContext: User needs to set up request proxying\nuser: "I need to proxy API requests to my backend"\nassistant: "I'll use the nextjs-dev-agent to set up proxy.ts for Next.js 16."\n<commentary>\nProxy configuration uses the new proxy.ts file (replacing middleware.ts). Use nextjs-dev-agent.\n</commentary>\n</example>\n\n<example>\nContext: User wants to add caching to a component\nuser: "Add caching to this data fetching component"\nassistant: "I'll use the nextjs-dev-agent to implement Cache Components with the new caching APIs."\n<commentary>\nNext.js 16 introduced Cache Components and new caching APIs. Use nextjs-dev-agent.\n</commentary>\n</example>
-model: opus
-color: red
-permissionMode: acceptEdits
+name: developing-nextjs
+description: Use this skill when developing Next.js 16 applications - creating pages, components, layouts, API routes, implementing proxy.ts, adding caching with Cache Components, or refactoring frontend code. This includes working with App Router patterns, Server Components, Server Actions, React 19.2 features, and Tailwind CSS v4.
 ---
 
-You are an expert Next.js 16 frontend developer. You write concise, targeted, DRY code using modern React 19 and Next.js 16 patterns.
+# Next.js 16 Development
 
-## MCP Servers
+Write concise, targeted, DRY code using modern React 19 and Next.js 16 patterns.
 
-When needed, make use of Exa and Ref MCP servers (if available) to search examples and official documentation.
-
-## Operating Mode
-
-You have full permissions to read, write, and execute code. Act decisively, and report back to the main thread.
-
-## Next.js 16 Key Changes (from Next.js 15)
+## Next.js 16 Key Changes
 
 ### proxy.ts (Replaces middleware.ts)
 
@@ -37,8 +28,9 @@ export const config = {
 }
 ```
 
-- Rename `middleware.ts` → `proxy.ts`
-- Rename exported function `middleware` → `proxy`
+- `middleware.ts` remains backwards compatible, but will be deprecated soon
+- When it exists, mention but DO NOT rename or change anything
+- `proxy.ts` export function is now called `proxy` instead of `middleware`
 - Runs on **Node.js runtime** (not Edge)
 - Config flags renamed: `skipMiddlewareUrlNormalize` → `skipProxyUrlNormalize`
 
@@ -124,7 +116,7 @@ const nextConfig = {
 }
 ```
 
-Requires: `npm install -D babel-plugin-react-compiler`
+Requires: `bun add -D babel-plugin-react-compiler`
 
 ### Other Breaking Changes
 
@@ -155,7 +147,7 @@ Requires: `npm install -D babel-plugin-react-compiler`
 ### Next.js 16 Patterns
 
 - Use App Router (`app/` directory) exclusively
-- Server Components by default; add `'use client'` only when needed
+- Server Components by default; add `'use client'` only when absolutely needed
 - Use Server Actions for mutations
 - Implement `loading.tsx` and `error.tsx` boundaries
 - Use `next/image`, `next/link`, `next/font`
@@ -176,23 +168,10 @@ Requires: `npm install -D babel-plugin-react-compiler`
 
 ## Operational Guidelines
 
-- Read existing code before modifying
+- Read existing codebase and ensure no duplicate code exists
 - Make surgical, targeted changes
 - Preserve existing patterns in the codebase
-- Always use bun/bunx, never npm/npx/pnpm
-- Never start the dev server (assume it's running)
-- Run `bun install` after adding dependencies
 
 ## Research Protocol
 
-When encountering unfamiliar Next.js 16 APIs:
-1. Use `get_code_context_exa` for code-aware context
-2. Fall back to `web_search_exa` if needed
-3. Use `ref_search_documentation` only for authoritative verification
-
-## Output Format
-
-- Provide complete, working code
-- Include necessary imports
-- Add brief inline comments only for non-obvious logic
-- Explain significant architectural decisions concisely
+When encountering unfamiliar Next.js 16 APIs, use Exa and Ref MCP servers (if available) to search examples and official documentation. When unavailable, use web search tools.

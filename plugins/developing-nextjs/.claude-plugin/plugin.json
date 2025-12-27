@@ -1,0 +1,6 @@
+{
+  "name": "developing-nextjs",
+  "description": "Next.js 16 frontend development skill with modern patterns",
+  "version": "1.0.0",
+  "skills": "./skills/"
+}
